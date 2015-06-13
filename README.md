@@ -1,2 +1,2 @@
 # questionarioAngular
-Gerador de questionários com AngularJS
+Gerador de questionários com AngularJS.
