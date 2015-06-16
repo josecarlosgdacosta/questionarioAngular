@@ -15,18 +15,16 @@
         <h2>Question&aacute;rio</h2>
 
         <div ng-controller="questionarioGenerator">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-condensed" style="width: 70%">
                 <tr>
-                    <td>{{getMeta.nomeMeta}}</td>
+                    <td class="success text-center"><strong>{{arrMetas[0].nomeMeta}}</strong></td>
+                    <td ng-repeat="x in arrMetas[0].instancias.perguntas"">{{x.codPergunta}}</td>
                 </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td ng-repeat="codPergunta in arrMetas[0].instancias.perguntas">{{codPergunta.p1}}</td>
-                </tr>
+
                 <tr ng-repeat="instancia in arrMetas[0].instancias">
-                    <td>{{instancia.dscInstancia}}</td>
-                    <td>
-                        <input type="text" name="pergunta" id="{{instancia.perguntas[$index]}}" />
+                    <td class="info text-center"><em>{{instancia.dscInstancia}}</em></td>
+                    <td ng-repeat="pergunta in instancia.perguntas" class="text-center">
+                        <input type="text" name="pergunta" id="{{pergunta.seqPergunta}}" ng-disabled="{{!pergunta.flgAplicabilidade}}""/>
                     </td>
                 </tr>
             </table>
