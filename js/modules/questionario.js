@@ -15,40 +15,48 @@ questionarioModule.controller("questionarioGenerator", function($scope){
 // POSSÍVEL RETORNO DO BACKEND.
 var metas = [{
     nomeMeta: "Meta 1",
+    perguntasMeta: [
+        {seqPergunta:"1", codPergunta:"P1.1", dscPergunta:"Descrição da pergunta", flgAtivo:"1", tipoResposta:"quant"},
+        {seqPergunta:"2", codPergunta:"P1.2", dscPergunta:"Descrição da pergunta", flgAtivo:"1", tipoResposta:"quant"},
+        {seqPergunta:"3", codPergunta:"P1.3", dscPergunta:"Descrição da pergunta", flgAtivo:"1", tipoResposta:"quant"},
+        {seqPergunta:"4", codPergunta:"P1.4", dscPergunta:"Descrição da pergunta", flgAtivo:"1", tipoResposta:"quant"},
+        {seqPergunta:"5", codPergunta:"P1.5", dscPergunta:"Descrição da pergunta", flgAtivo:"1", tipoResposta:"quant"},
+        {seqPergunta:"6", codPergunta:"P1.6", dscPergunta:"Descrição da pergunta", flgAtivo:"1", tipoResposta:"quant"},
+    ],
     instancias: [
         {
             dscInstancia:"Tribunal",
-            perguntas:[
-                {seqPergunta:1, codPergunta:"P1.1", dscPergunta:"Valor para a pergunta P1.1.", flgAplicabilidade:true},
-                {seqPergunta:2, codPergunta:"P1.2", dscPergunta:"Valor para a pergunta P1.2.", flgAplicabilidade:true},
-                {seqPergunta:3, codPergunta:"P1.3", dscPergunta:"Valor para a pergunta P1.3.", flgAplicabilidade:true},
-                {seqPergunta:4, codPergunta:"P1.4", dscPergunta:"Valor para a pergunta P1.4.", flgAplicabilidade:true},
-                {seqPergunta:5, codPergunta:"P1.5", dscPergunta:"Valor para a pergunta P1.5.", flgAplicabilidade:true},
-                {seqPergunta:6, codPergunta:"P1.6", dscPergunta:"Valor para a pergunta P1.6.", flgAplicabilidade:true}
+            respostas:[
+                {seqPergunta:1, flgAplicabilidade:true},
+                {seqPergunta:2, flgAplicabilidade:true},
+                {seqPergunta:3, flgAplicabilidade:true},
+                {seqPergunta:4, flgAplicabilidade:true},
+                {seqPergunta:5, flgAplicabilidade:true},
+                {seqPergunta:6, flgAplicabilidade:true}
             ]
         },
 
         {
             dscInstancia:"Juizados Especiais",
-            perguntas:[
-                {seqPergunta:1, codPergunta:"P1.1", dscPergunta:"Valor para a pergunta P1.1.", flgAplicabilidade:true},
-                {seqPergunta:2, codPergunta:"P1.2", dscPergunta:"Valor para a pergunta P1.2.", flgAplicabilidade:false},
-                {seqPergunta:3, codPergunta:"P1.3", dscPergunta:"Valor para a pergunta P1.3.", flgAplicabilidade:true},
-                {seqPergunta:4, codPergunta:"P1.4", dscPergunta:"Valor para a pergunta P1.4.", flgAplicabilidade:false},
-                {seqPergunta:5, codPergunta:"P1.5", dscPergunta:"Valor para a pergunta P1.5.", flgAplicabilidade:true},
-                {seqPergunta:6, codPergunta:"P1.6", dscPergunta:"Valor para a pergunta P1.6.", flgAplicabilidade:false}
+            respostas:[
+                {seqPergunta:1, flgAplicabilidade:true},
+                {seqPergunta:2, flgAplicabilidade:false},
+                {seqPergunta:3, flgAplicabilidade:true},
+                {seqPergunta:4, flgAplicabilidade:false},
+                {seqPergunta:5, flgAplicabilidade:true},
+                {seqPergunta:6, flgAplicabilidade:false}
             ]
         },
 
         {
             dscInstancia:"Turmas Recursais",
-            perguntas:[
-                {seqPergunta:1, codPergunta:"P1.1", dscPergunta:"Valor para a pergunta P1.1.", flgAplicabilidade:false},
-                {seqPergunta:2, codPergunta:"P1.2", dscPergunta:"Valor para a pergunta P1.2.", flgAplicabilidade:true},
-                {seqPergunta:3, codPergunta:"P1.3", dscPergunta:"Valor para a pergunta P1.3.", flgAplicabilidade:false},
-                {seqPergunta:4, codPergunta:"P1.4", dscPergunta:"Valor para a pergunta P1.4.", flgAplicabilidade:true},
-                {seqPergunta:5, codPergunta:"P1.5", dscPergunta:"Valor para a pergunta P1.5.", flgAplicabilidade:false},
-                {seqPergunta:6, codPergunta:"P1.6", dscPergunta:"Valor para a pergunta P1.6.", flgAplicabilidade:true}
+            respostas:[
+                {seqPergunta:1, flgAplicabilidade:false},
+                {seqPergunta:2, flgAplicabilidade:true},
+                {seqPergunta:3, flgAplicabilidade:false},
+                {seqPergunta:4, flgAplicabilidade:true},
+                {seqPergunta:5, flgAplicabilidade:false},
+                {seqPergunta:6, flgAplicabilidade:true}
             ]
         }
     ]

@@ -15,14 +15,14 @@
             <table class="table table-bordered table-condensed" style="width: 70%">
                 <tr>
                     <td class="success text-center"><strong>{{arrMetas[0].nomeMeta}}</strong></td>
-                    <td ng-repeat="x in arrMetas[0].instancias.perguntas"">{{x.codPergunta}}</td>
+                    <td class="info text-center" ng-repeat="x in arrMetas[0].perguntasMeta""><strong>{{x.codPergunta}}</strong></td>
                 </tr>
 
                 <tr ng-repeat="instancia in arrMetas[0].instancias">
                     <td class="info text-center"><em>{{instancia.dscInstancia}}</em></td>
-                    <td ng-repeat="pergunta in instancia.perguntas" class="text-center" style="vertical-align: middle">
-                        <span class="label label-danger" ng-show="{{!pergunta.flgAplicabilidade}}">Não aplicável</span>
-                        <input type="text" name="pergunta" id="{{pergunta.seqPergunta}}" ng-hide="{{!pergunta.flgAplicabilidade}}" ng-disabled="{{!pergunta.flgAplicabilidade}}" />
+                    <td ng-repeat="resposta in instancia.respostas" class="text-center" style="vertical-align: middle">
+                        <span class="label label-danger" ng-show="{{!resposta.flgAplicabilidade}}">Não aplicável</span>
+                        <input type="text" name="pergunta" id="{{resposta.seqPergunta}}" ng-hide="{{!resposta.flgAplicabilidade}}" ng-disabled="{{!resposta.flgAplicabilidade}}" />
                     </td>
                 </tr>
             </table>
